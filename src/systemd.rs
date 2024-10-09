@@ -203,6 +203,7 @@ impl ServiceManager {
         if total_jobs > 0 {
             log::info!("Waiting for jobs to finish...");
             log::debug!("Waiting for jobs to finish... (0/{})", total_jobs);
+            log::debug!("Waiting for: {waiting_for:?}");
         }
 
         while !waiting_for.is_empty() {
